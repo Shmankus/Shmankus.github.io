@@ -8,6 +8,9 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 
+
+import worldRadio from '/worldRadio.jpeg'
+
 function AppNavbar() {
   return (
     <div id="nav">
@@ -27,21 +30,21 @@ function AppNavbar() {
   );
 }
 
-function IndividualIntervalsExample() {
+function CarouselComponent() {
   return (
     <Carousel>
       <Carousel.Item  interval={5000}>
         <img className="carousel-image" src="https://github.com/Shmankus/VolumeMixerBridgeThing/raw/dev/image-1.png" alt="VolumeMixerThing" />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>volumeMixerThing</h3>
+          <p>WebApp for Spotify CarThing using BridgeThing</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={5000}>
-        <img className="carousel-image" src="https://private-user-images.githubusercontent.com/110833850/614820577-f9b30529-24ca-400e-848a-786e0299902f.jpeg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTAxMDkzNDMsIm5iZiI6MTc5MDEwOTA0MywicGF0aCI6Ii8xMTA4MzM4NTAvNjE0ODIwNTc3LWY5YjMwNTI5LTI0Y2EtNDAwZS04NDhhLTc4NmUwMjk5OTAyZi5qcGVnP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDkyMiUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA5MjJUMjAzMDQzWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YzFiMDQ2NWExMjA2MzA1ZjJlZGY0NmExNjEwM2M2MWU3ODM1NzllYzg4NWVkODZhNDg2MjhjYTE4Y2I0NzNiNCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGanBlZyJ9.G0Byv5gTCsqzH34hXhOww2CUby5I9S4PW_Gf7UrdeUs" alt="VolumeMixerThing" />
+        <img className="carousel-image" src={worldRadio} alt="worldRadio" />
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>worldRadio</h3>
+          <p>Uses API calls from radio garden to play world radio stations and display them</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
@@ -50,7 +53,9 @@ function IndividualIntervalsExample() {
 
 function Home() {
   return (
-    <div class="textured_bg">
+    <>
+
+        <div class="textured_bg">
       <section>
         <div>
           <h1>shmankus.github.io</h1>
@@ -62,9 +67,10 @@ function Home() {
 
       <section>
         <div id="repoSection">
-          {IndividualIntervalsExample()}
+          {CarouselComponent()}
         </div>
       </section>
+      </div>
 
       <section id="next-steps">
         <div id="social">
@@ -88,7 +94,7 @@ function Home() {
       </section>
 
 
-    </div>
+    </>
   )
 }
 

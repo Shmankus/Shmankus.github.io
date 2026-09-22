@@ -1,6 +1,6 @@
 /* Theme and document defaults */
 :root {
-  --text: #6b6375;
+  --text: #c9c4cf;
   --text-h: #08060d;
   --bg: #fff;
   --border: #e5e4e7;
@@ -36,7 +36,7 @@
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
+    --text: #e3e6eb;
     --text-h: #f3f4f6;
     --bg: #35000d;
     --border: #2e303a;
@@ -119,7 +119,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("public/IMG_0014.jpg");
+  background-image: url("public/design.jpeg");
   opacity: 0.15; /* Only fades the texture layer */
   z-index: 0;
   pointer-events: none;

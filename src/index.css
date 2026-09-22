@@ -1,3 +1,4 @@
+/* Theme and document defaults */
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -25,19 +26,22 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  
+
   @media (max-width: 1024px) {
     font-size: 16px;
   }
 }
 
+/* Dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
     --text-h: #f3f4f6;
-    --bg: #16171d;
+    --bg: #35000d;
     --border: #2e303a;
     --code-bg: #1f2028;
-    --accent: #c084fc;
+    --accent: #520014;
     --accent-bg: rgba(192, 132, 252, 0.15);
     --accent-border: rgba(192, 132, 252, 0.5);
     --social-bg: rgba(47, 48, 58, 0.5);
@@ -50,19 +54,16 @@
   }
 }
 
+/* Base document layout */
 body {
   margin: 0;
+  background: var(--bg);
+  
 }
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -81,6 +82,7 @@ h1 {
     font-size: 36px;
     margin: 20px 0;
   }
+  color: var(--text)
 }
 h2 {
   font-size: 24px;
@@ -95,17 +97,36 @@ p {
   margin: 0;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+#root {
+  width: 1126px;
+  max-width: 100%;
+  min-height: 100svh;
+  margin: 0 auto;
+  background: var(--bg);
+  border-inline: 1px solid var(--border);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+.textured_bg {
+  position: relative;
+  background-color: var(--bg);
+}
+
+/* Creates a separate layer just for the texture */
+.textured_bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("public/IMG_0014.jpg");
+  opacity: 0.15; /* Only fades the texture layer */
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ensures content sits cleanly on top of the texture layer */
+.textured_bg > * {
+  position: relative;
+  z-index: 1;
 }

@@ -1,12 +1,15 @@
 function About() {
   return (
-    <div className="textured_bg about-page hide-scrollbar">
+    <div className="textured_bg about-page">
+      <div className="about-scroll hide-scrollbar">
       <div className="about-container">
 
         <header className="about-hero">
           <div className="tech-badge"><span>/About</span></div>
-          <h1>Shmank</h1>
-          <p className="hero-subtitle">FULL-STACK DEV // SYSTEMS PROGRAMMER // CS STUDENT</p>
+          <h1>Luuk Jansen</h1>
+          <p className="hero-subtitle">(FULL-STACK_DEV && SYSTEMS_PROGRAMMER && CS_GRADUATE && !DONE_LEARNING)
+
+          </p>
         </header>
 
         <section className="about-card">
@@ -16,17 +19,30 @@ function About() {
           </div>
           <div className="about-card-content">
             <p>
-              I'm a computer science student finishing up my degree at Miami University,
-              building full-stack web apps and lower-level systems tools in equal measure.
-              On the web side that's React, PHP, and SQL; underneath that it's C and C++,
-              plus running and administering my own Linux servers. This paragraph is a
-              placeholder &mdash; swap it out for your own story.
+              Hi, I'm Luuk! I'm a recent Computer Science graduate from Miami University. My academic foundation includes core coursework in Data Structures, Algorithms, Systems, Databases, and Image Processing.
             </p>
+
+            <p className="bio-lead-in">Beyond the classroom, I enjoy building practical applications and exploring new technologies:</p>
+
+            <ul className="bio-highlights">
+              <li className="bio-highlight">
+                <span className="bio-highlight-title">MU Advising Assistant &amp; AI Tutor</span>
+                <p className="bio-highlight-desc">
+                  Co-developed an academic advising website for students and faculty as a capstone team project, alongside an AI-powered tutoring platform featuring clean web design and API integration.
+                </p>
+              </li>
+              <li className="bio-highlight">
+                <span className="bio-highlight-title">Full-Stack &amp; Hardware Projects</span>
+                <p className="bio-highlight-desc">
+                  Regularly build React and Node.js web applications, including custom apps for the Spotify Car Thing utilizing DeskThing and BridgeThing.
+                </p>
+              </li>
+            </ul>
           </div>
         </section>
 
         <section className="about-section">
-          <div className="tech-badge"><span>/Skills</span></div>
+          <div className="tech-badge"><span>./Skills</span></div>
           <div className="skills-grid">
 
             <div className="skill-group">
@@ -34,6 +50,7 @@ function About() {
               <div className="project-card-tags">
                 <span className="project-card-tag">React</span>
                 <span className="project-card-tag">JavaScript</span>
+                <span className="project-card-tag">TypeScript</span>
                 <span className="project-card-tag">PHP</span>
                 <span className="project-card-tag">SQL</span>
               </div>
@@ -61,57 +78,43 @@ function About() {
         </section>
 
         <section className="about-section">
-          <div className="tech-badge"><span>/Currently</span></div>
+          <div className="tech-badge"><span>./Currently</span></div>
           <div className="focus-grid">
 
             <div className="focus-card">
               <div className="project-card-topbar">
-                <span className="project-card-index">/ai-tutor</span>
-              </div>
-              <div className="project-card-content">
-                <h3 className="project-card-title">AI Tutor</h3>
-                <p className="project-card-description">
-                  A ChatGPT-API-backed tutoring app with text-to-speech, built to walk
-                  through topics at whatever level you're studying at.
-                </p>
-              </div>
-            </div>
-
-            <div className="focus-card">
-              <div className="project-card-topbar">
-                <span className="project-card-index">/home-server</span>
+                <span className="project-card-index">./home-server</span>
               </div>
               <div className="project-card-content">
                 <h3 className="project-card-title">Home Server</h3>
                 <p className="project-card-description">
-                  A self-hosted Ubuntu box running the services behind this site
-                  and a handful of homelab experiments.
+                  A self-hosted Ubuntu box running handful of homelab experiments and services
+                
                 </p>
               </div>
             </div>
-
             <div className="focus-card">
               <div className="project-card-topbar">
-                <span className="project-card-index">/local-llm</span>
+                <span className="project-card-index">./Volume_Mixer_Thing</span>
               </div>
               <div className="project-card-content">
-                <h3 className="project-card-title">Local LLM Inference</h3>
+                <h3 className="project-card-title">Volume_Mixer_Thing</h3>
                 <p className="project-card-description">
-                  Running models at home with llama.cpp, tuned for multi-GPU
-                  acceleration.
+                  A webapp built for the BridgeThing custom firmware, With this I can control specified apps' volumes and control media playback with a nice UI
+                
                 </p>
               </div>
             </div>
 
+      
             <div className="focus-card">
               <div className="project-card-topbar">
-                <span className="project-card-index">/jailbreak</span>
+                <span className="project-card-index">./jailbreak</span>
               </div>
               <div className="project-card-content">
                 <h3 className="project-card-title">iPhone Dev Projects</h3>
                 <p className="project-card-description">
-                  Tweaks and daemons built on a jailbroken iPhone 7 &mdash; a
-                  stay-awake daemon, a network logger, and a BLE scanner.
+                  Learning how to make tweaks and apps for a jailbroken Iphone 7 running iOS 15.2.1
                 </p>
               </div>
             </div>
@@ -120,13 +123,16 @@ function About() {
         </section>
 
         <section className="about-connect">
-          <div className="tech-badge"><span>/Connect</span></div>
+          <div className="tech-badge"><span>./Connect</span></div>
+          <div className="about-connect-links">
           <a
             href="https://github.com/Shmankus"
             target="_blank"
             rel="noopener noreferrer"
             className="project-card-link"
           >
+
+           
             <span>VIEW GITHUB</span>
             <svg
               className="project-card-link-icon"
@@ -143,8 +149,33 @@ function About() {
               <polyline points="7 7 17 7 17 17"></polyline>
             </svg>
           </a>
+
+          <a
+            href="https://www.linkedin.com/in/luuk-jansen314/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-card-link"
+          >
+            <span>VIEW LinkedIn</span>
+            <svg
+              className="project-card-link-icon"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="square"
+              strokeLinejoin="miter"
+            >
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+          </div>
         </section>
 
+      </div>
       </div>
     </div>
   );

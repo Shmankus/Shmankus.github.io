@@ -47,7 +47,8 @@ function Home() {
       </div>
 
       {/* PAGE 2 */}
-      <div id="page2" className="snap-page textured_bg hide-scrollbar">
+      <div id="page2" className="snap-page textured_bg">
+        <div className="page2-scroll hide-scrollbar">
         <div className="projects-container">
           <div className="projects-header">
             <div
@@ -70,6 +71,7 @@ function Home() {
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
+        </div>
         </div>
       </div>
 

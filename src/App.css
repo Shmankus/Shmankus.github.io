@@ -606,9 +606,13 @@ Page 2 - Projects Grid
 */
 #page2 {
   height: 100%;
-  overflow-y: auto;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+}
+
+.page2-scroll {
+  height: 100%;
+  overflow-y: auto;
 }
 
 .projects-container {
@@ -857,6 +861,10 @@ About page
   flex: 1;
   min-height: 0;
   height: 100%;
+}
+
+.about-scroll {
+  height: 100%;
   overflow-y: auto;
 }
 
@@ -942,6 +950,54 @@ About page
   font-size: 14.5px;
   line-height: 1.6;
   color: rgba(227, 230, 235, 0.9);
+  margin-bottom: 14px;
+}
+
+.about-card-content p:last-child {
+  margin-bottom: 0;
+}
+
+.about-card-content p.bio-lead-in {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: rgba(227, 230, 235, 0.65);
+}
+
+.bio-highlights {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bio-highlight {
+  position: relative;
+  padding: 10px 14px;
+  background: rgba(50, 0, 15, 0.4);
+  border-left: 2px solid #c084fc;
+}
+
+.bio-highlight-title {
+  display: block;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-h);
+  margin-bottom: 4px;
+}
+
+.about-card-content p.bio-highlight-desc {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: rgba(227, 230, 235, 0.85);
 }
 
 .about-section {
@@ -1007,6 +1063,13 @@ About page
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 12px;
+}
+
+.about-connect-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
 }
 

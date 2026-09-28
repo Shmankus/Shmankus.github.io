@@ -61,9 +61,11 @@ function Home() {
                 RETURN // HOME
               </div>
             </div>
+            <header className="hero-header">
             <div className="tech-badge"><span>/Projects</span></div>
             <h2>ALL PROJECTS</h2>
             <p>Curated index of software builds, coursework, and Homelab Projects</p>
+            </header>
           </div>
 
           <div className="projects-grid">

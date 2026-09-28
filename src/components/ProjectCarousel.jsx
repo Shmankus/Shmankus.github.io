@@ -1,7 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import worldRadio from '../assets/worldRadio.jpeg'
 import cellTracking from '../assets/cellTracking.png'
-
+import AirLogger from '../assets/AirLogger.png'
 function ProjectCarousel() {
   return (
     <div className="carousel-chassis">
@@ -22,10 +22,10 @@ function ProjectCarousel() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={5000}>
-          <img className="carousel-image" src={cellTracking} alt="Cell Tracking Challenge" />
+          <img className="carousel-image" src={AirLogger} alt="AirLogger" />
           <Carousel.Caption>
-            <h3>Cell Tracking Challenge</h3>
-            <p>Cell Tracking Challenge completed in my image processing course</p>
+            <h3>AirLogger</h3>
+            <p>Scans all nearby Wi-Fi and BlueTooth devices around and plots them on a map</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
